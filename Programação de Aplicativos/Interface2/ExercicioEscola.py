@@ -4,7 +4,7 @@ from tkinter import *
 
 
 
-app = customtkinter.CTk('#015F03') #cria e da cor para janela
+app = customtkinter.CTk('#101010') #cria e da cor para janela
 app.geometry("1000x800")
 app.title('Sistema Escolar V 1.0')
 
@@ -75,6 +75,7 @@ buttonResult = customtkinter.CTkButton(app, text="Resultado",
                                        width=200, height=30,
                                        text_color='White',
                                        bg_color='#2FB201',
+                                       fg_color='#2FB201',
                                        command=resultadoMedia)
 buttonResult.pack(pady=10)
 
@@ -83,12 +84,13 @@ buttonLimpar = customtkinter.CTkButton(app, text="Limpar",
                                        font=('Istok Web', 20, "bold"),
                                        width=200, height=30,
                                        text_color='White',
+                                       fg_color='red',
                                        bg_color='red',
                                        command=resultadoMedia)
 buttonLimpar.pack(pady=10)
 
 
-saidaResult = customtkinter.CTkEntry(app, width=400, height=100)
+saidaResult = customtkinter.CTkEntry(app, width=400, height=50, )
 saidaResult.pack(pady=30)
 
 
