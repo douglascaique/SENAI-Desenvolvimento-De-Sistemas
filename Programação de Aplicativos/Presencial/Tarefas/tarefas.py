@@ -14,11 +14,12 @@ def adicionar_tarefa():
         messagebox.showerror('Erro', 'Digite uma tarefa para adicionar.')
 
 def remover_tarefa():
-    try:
         selecao = lista_tarefas.curselection()
-        lista_tarefas.delete(selecao)
-    except ctk.TclError:
-        messagebox.showerror('Erro', 'Digite uma tarefa para remover.')
+        
+        if selecao:
+            lista_tarefas.delete(selecao)
+        else:
+            messagebox.showerror('Erro', 'Por favor, escolha uma tarefa para remover.')
 
 
 # ----- default style
@@ -29,6 +30,7 @@ app.title('TO-DO List')
 
 #----root style
 fontH1 = ('Arial', 24, 'bold')
+fontH2 = ('Arial', 18, 'bold')
 fontH3 = ('Arial', 14, 'bold')
 fontP = ('Arial', 12, 'bold')
 
@@ -45,7 +47,7 @@ ctk.CTkLabel(app,text='TO-DO LIST',
 button_adicionar = ctk.CTkButton(app, text='Adicionar Tarefa',
                               font=fontH3, text_color='white',
                                fg_color='green', cursor='hand2',
-                              width=135,corner_radius=5, hover_color='green',
+                              width=135,corner_radius=5, hover_color='darkgreen',
                               command=adicionar_tarefa
                               )
 button_adicionar.place(x=40, y=60)
@@ -55,14 +57,14 @@ button_adicionar.place(x=40, y=60)
 button_remove = ctk.CTkButton(app, text='Remover Tarefa',
                               font=fontH3, text_color='white',
                               fg_color='red', cursor='hand2',
-                              width=135,corner_radius=5,hover_color='red',
+                              width=135,corner_radius=5,hover_color='darkred',
                               command=remover_tarefa)
 button_remove.place(x=180, y=60)
 
 
 # entrada de tarefas
 entrada_tarefas = ctk.CTkEntry(app, font=fontP,
-                             width=300, height=50)
+                             width=300, height=20)
 entrada_tarefas.place(x=25, y=100)
 
 
@@ -73,13 +75,13 @@ entrada_tarefas.place(x=25, y=100)
 # Lista de tarefas
 ctk.CTkLabel(app, text='TO-DO',
              text_color='white',
-             font=fontH3).place(x=155, y=160)
+             font=fontH2).place(x=150, y=150)
 
 
 
 lista_tarefas = Listbox(app, font=fontP,
                         width=30, height=10,
                         bg='#3e3e3e', fg='white')
-lista_tarefas.place(x=40, y=200)
+lista_tarefas.place(x=40, y=180)
 
 app.mainloop()
