@@ -10,6 +10,7 @@ def adicionar_tarefa():
     if tarefa:
         lista_tarefas.insert(0, tarefa)
         entrada_tarefas.delete(0, END)
+        salvar_tarefas()
     else:
         messagebox.showerror('Erro', 'Digite uma tarefa para adicionar.')
 
@@ -18,10 +19,23 @@ def remover_tarefa():
         
         if selecao:
             lista_tarefas.delete(selecao)
+            salvar_tarefas()
         else:
             messagebox.showerror('Erro', 'Por favor, escolha uma tarefa para remover.')
 
 
+def salvar_tarefas():
+    with open('tarefas.txt', 'w') as t:
+        tarefas = lista_tarefas.get(0, END)
+        for i in tarefas:
+            t.write(i + '\n')
+            
+def carregar_tarefas():
+        with open('tarefas.txt', 'r') as t:
+            tarefas = t.readlines()
+            for i in tarefas:
+                lista_tarefas.insert(0,i.strip())
+    
 # ----- default style
 ctk.set_appearance_mode('dark')
 app = ctk.CTk()
@@ -84,4 +98,9 @@ lista_tarefas = Listbox(app, font=fontP,
                         bg='#3e3e3e', fg='white')
 lista_tarefas.place(x=40, y=180)
 
+
+
+
+
+carregar_tarefas()
 app.mainloop()
