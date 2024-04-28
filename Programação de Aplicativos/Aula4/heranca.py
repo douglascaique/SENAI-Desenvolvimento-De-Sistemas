@@ -1,45 +1,31 @@
-class Clientes:
-    def __init__(self, nome, idade, cpf, limite):
+
+class Pessoa:
+    def __init__(self, nome, cpf, idade):
         self.nome = nome
-        self.idade = idade
         self.cpf = cpf
+        self.idade = idade
+
+
+class Clientes(Pessoa):
+    def __init__(self, nome, cpf, idade, limite):
+        super().__init__(nome, cpf, idade)
         self.limite = limite
 
-
-    def nome(self):
-        return f'{self.__nome}'
-
-    def exibir(self):
-        return (f"Nome: {self.nome}")
-        return (f"Idade: {self.idade}")
-        return (f"CPF: {self.cpf}")
-        return (f"Limite: {self.limite}")
-
-# cliente1 = Clientes("João", 30, "123.456.789-00", 1000)
-# print(cliente1.exibir)
+    def informaLimite(self):
+        print(f'Olá {self.nome}, seu limite é de: {self.limite}')
 
 
-
-
-
-class Funcionarios:
-    def __init__(self, nome, idade, cpf, salario):
-        self.nome = nome
-        self.idade = idade
-        self.cpf = cpf
+class Funcionario(Pessoa):
+    def __init__(self, nome, cpf, salario):
+        super().__init__(nome, cpf)
         self.salario = salario
 
-    def nome(self):
-        return f'{self.__nome}'
-
-    def exibir(self):
-        print(f"Nome: {self.nome}")
-        print(f"Idade: {self.idade}")
-        print(f"CPF: {self.cpf}")
-        print(f"Salário: {self.salario}")
 
 
-funcionario1 = Funcionarios("Maria", 25, "987.654.321-00", 2000)
-print(funcionario1.nome)
 
+
+
+cliente1 = Clientes("João", 30, "123.456.789-00", 1000)
+
+cliente1.informaLimite()
 
