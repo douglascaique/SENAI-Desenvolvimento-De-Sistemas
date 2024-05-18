@@ -14,7 +14,7 @@ cursor = conexao.cursor()
 
 # cursor.execute('INSERT INTO clientes (nome,idade) values ("Douglas", 25)')
 # cursor.execute('INSERT INTO clientes (nome,idade) values ("Luis", 13)')
-cursor.execute('DELETE FROM clientes WHERE id ("Luis", 13)')
+# cursor.execute('DELETE FROM clientes WHERE id ("Luis", 13)')
 
 
 
