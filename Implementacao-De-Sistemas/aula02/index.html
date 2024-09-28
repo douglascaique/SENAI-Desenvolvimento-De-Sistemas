@@ -8,23 +8,46 @@
 <body>
     <h1>Informações Pessoais</h1>
     <p id="resultado"></p>
-    <button onclick="mostrarResultado()">Calcular Soma</button>
-
+    <button onclick="mostrarResultado()">Dados</button>
 
 
     <script>
-            let a = 10
-            let b = 20
-            const soma = a + b
+
+
+
+
+        // SOMAS
+            // let a = 10
+            // let b = 20
+            // const soma = a + b
 
             
 
-            const mostrarResultado = () => {
-                //Acesse dentro do documento html, o elemento com ID resultado e insira dentro da sua tag de conteúdo o seguinte texto:
-                document.getElementById('resultado').textContent = `A soma de ${a} e ${b} é igual a ${soma}`
-            }
+            // const mostrarResultado = () => {
+            //     //Acesse dentro do documento html, o elemento com ID resultado e insira dentro da sua tag de conteúdo o seguinte texto:
+            //     document.getElementById('resultado').textContent = `A soma de ${a} e ${b} é igual a ${soma}`
+            // }
 
 
+        let nome = `Douglas Caíque Souza da Silva`
+        let idade = 25
+        
+        let telefone = `71 9 9137-9646`
+        let email = `douglascaique@hotmail.com`
+        let endereco  = ``
+        let portfolio = `<a href="https://douglascaique.vercel.app/" target="_blank">Portfólio</a>`
+
+        const mostrarResultado = () => {
+            document.getElementById("resultado").innerHTML = `
+            Nome: ${nome} <br>
+            Idade: ${idade} <br>
+            Telefone: ${telefone} <br>
+            Email: ${email} <br>
+            Portfólio: ${portfolio}`
+        }
+
+
+        //Resumo sobre você: Principais habilidades, pontos positivos, como eu interajo nos meus circulos sociais, habilidades sociais como persuassao, diplomacia, Por que a empresa deveria te contratar?
     </script>
 </body>
 </html>
