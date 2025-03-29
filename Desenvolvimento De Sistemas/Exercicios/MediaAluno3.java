@@ -2,7 +2,7 @@ package exercicios;
 
 import java.util.Scanner;
 
-public class MediaAluno2 {
+public class MediaAluno3 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
@@ -11,11 +11,8 @@ public class MediaAluno2 {
         String nome = scanner.nextLine();
 
         // Lê as notas das duas provas
-        System.out.print("Digite a nota da primeira prova: ");
-        double nota1 = scanner.nextDouble();
-
-        System.out.print("Digite a nota da segunda prova: ");
-        double nota2 = scanner.nextDouble();
+        double nota1 = validaNota(scanner, "Digite a nota da primeira prova: ");
+        double nota2 = validaNota(scanner, "Digite a nota da segunda prova: ");
 
         // Calcula a média aritmética
         double media = calculaMedia(nota1, nota2);
@@ -49,4 +46,19 @@ public class MediaAluno2 {
     public static Double calculaMedia(double nota1, double nota2) {
         return (nota1 + nota2) / 2;
     }
+
+    public static Double validaNota (Scanner scanner, String mensagem){
+        double nota;
+        do { 
+            System.out.print(mensagem);
+            nota = scanner.nextDouble();
+            if(nota < 0 | nota > 10){
+                System.out.println("Nota inválida! Digite um valor entre 0 e 10!");
+            }
+                
+        } while (nota < 0 || nota > 10);
+        return nota;
+    };
+
 }
+
