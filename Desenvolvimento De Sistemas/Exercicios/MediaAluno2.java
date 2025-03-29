@@ -1,4 +1,4 @@
-package Exercicios;
+package exercicios;
 
 import java.util.Scanner;
 
@@ -35,13 +35,13 @@ public class MediaAluno2 {
     }
 
 
-    public static String statusAluno(double media) {
-        if (media >= 7){
-            return "Aprovado";
-        } else if (media >= 5 && media <7) {
+//     public static String statusAluno(double media) {
+//         if (media >= 7){
+//             return "Aprovado";
+//         } else if (media >= 5 && media <7) {
             
-        }
-    }
+//         }
+//     }
 
     public static Double calculaMedia(double nota1, double nota2) {
         return (nota1 + nota2) / 2;
