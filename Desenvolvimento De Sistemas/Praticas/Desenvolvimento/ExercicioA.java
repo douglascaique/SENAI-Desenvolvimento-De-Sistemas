@@ -1,4 +1,4 @@
-package Desenvolvimento;
+package Praticas.Desenvolvimento;
 
 import javax.sound.sampled.SourceDataLine;
 

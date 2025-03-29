@@ -1,4 +1,4 @@
-package ExerciciosLacos;
+package Praticas.ExerciciosLacos;
 
 public class vetores {
     public static void main(String[] args) {

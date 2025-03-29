@@ -2,4 +2,4 @@
 
 Exercicio:
 Utilizando a herança codifique:
-![alt text](image.png)
+![alt text](Praticas/image.png)

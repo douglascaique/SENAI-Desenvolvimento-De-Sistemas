@@ -1,4 +1,4 @@
-package Desenvolvimento;
+package Praticas.Desenvolvimento;
 
 
 public class hello {
