@@ -1,4 +1,4 @@
-package Desenvolvimento;
+package Praticas.Desenvolvimento;
 
 import java.awt.Dimension;
 import java.awt.Toolkit;

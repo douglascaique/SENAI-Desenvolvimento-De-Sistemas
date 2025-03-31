@@ -1,4 +1,4 @@
-package ExercicioPoo;
+package Praticas.ExercicioPoo;
 
 public class MainLivro {
     public static void main(String[] args) {

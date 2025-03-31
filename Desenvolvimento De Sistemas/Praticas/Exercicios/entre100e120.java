@@ -1,4 +1,4 @@
-package exercicios;
+package Praticas.Exercicios;
 
 public class entre100e120 {
     public static void main(String[] args) {
